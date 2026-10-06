@@ -1,0 +1,11 @@
+namespace: esdcghapp-test
+
+resources:
+  - namespace.yaml
+  - ../../base/database
+  - ../../base/app
+
+images:
+  - name: esdcghapp
+    newName: quay.io/pittar-rhdh/esdcghapp
+    newTag: latest

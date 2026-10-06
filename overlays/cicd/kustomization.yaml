@@ -1,0 +1,5 @@
+namespace: esdcghapp-cicd
+
+resources:
+  - namespace.yaml
+  - ../../base/cicd

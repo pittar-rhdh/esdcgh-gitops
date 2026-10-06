@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: esdcghapp
+    app.openshift.io/runtime: quarkus
+    app.kubernetes.io/component: esdcghapp
+    app.kubernetes.io/instance: esdcghapp
+    app.kubernetes.io/part-of: esdcghapp
+    backstage.io/kubernetes-id: esdcghapp
+  name: esdcghapp
+spec:
+  port:
+    targetPort: 8080-tcp
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: esdcghapp
+    weight: 100
+  wildcardPolicy: None

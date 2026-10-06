@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: esdcghapp DEV
+    openshift.io/display-name: esdcghapp DEV
+  labels:
+    istio-discovery: enabled
+    argocd.argoproj.io/managed-by: openshift-gitops
+    backstage.io/kubernetes-id: esdcghapp
+    monitoring.rhobs/stack: workload-monitoring
+  name: esdcghapp-dev

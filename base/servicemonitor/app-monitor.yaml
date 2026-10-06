@@ -1,0 +1,14 @@
+apiVersion: monitoring.rhobs/v1
+kind: ServiceMonitor
+metadata:
+  name: esdcghapp
+  labels:
+    metrics: workload-monitor
+spec:
+  endpoints:
+    - interval: 30s
+      path: /metrics
+      port: esdcghapp
+  selector:
+    matchLabels:
+      metrics: workload-monitor
